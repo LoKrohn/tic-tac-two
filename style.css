@@ -1,0 +1,69 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    width: 100vw;
+    height: 60vh;
+}
+
+.cell {
+    width: 80px;
+    height: 80px;
+    border: 2px solid black;
+}
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+    border-top: none;
+}
+
+.cell:nth-child(3n+1) {
+    border-left: none;
+}
+
+.cell:nth-child(3n+3) {
+    border-right: none;
+}
+
+.cell:nth-child(7),
+.cell:nth-child(8),
+.cell:nth-child(9) {
+    border-bottom: none;
+}
+
+.x {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.x::after{
+    content: "\2716";
+    font-size: 60px;
+    color: rgb(179, 0, 0);
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.circle::before{
+    content: "\25CF";
+    font-size: 110px;
+    padding-bottom: 10px;
+    color: rgb(1, 1, 201);
+}
+
